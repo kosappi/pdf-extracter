@@ -1,3 +1,8 @@
 %h1 Results#index
 
-%p Find me in app/views/results/index.html.erb
+%form{ action: 'results/create', method: 'post'}
+  %input{ name: 'authenticity_token', value: form_authenticity_token, type: 'hidden' }
+  %p
+    title
+    %input{ name: 'title', type: 'text' }
+  %input{ type: 'submit', value: 'send'}
