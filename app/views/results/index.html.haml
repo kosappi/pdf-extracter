@@ -1,8 +1,9 @@
-%h1 Results#index
+%h1 軽減税率による飲食禁止ポスタージェネレータ
 
 %form{ action: 'results/create', method: 'post'}
   %input{ name: 'authenticity_token', value: form_authenticity_token, type: 'hidden' }
+  %p あなたのお店の名前
   %p
-    title
-    %input{ name: 'title', type: 'text' }
-  %input{ type: 'submit', value: 'send'}
+    %input{ name: 'title', type: 'text', size: 40, placeholder: 'セブンイレブン杜王町中央店' }
+  %p
+    %input{ type: 'submit', value: 'PDF作成'}
