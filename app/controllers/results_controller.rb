@@ -6,7 +6,8 @@ class ResultsController < ApplicationController
   end
 
   def create
-    @pdf = Pdf.new(pdf_params)
+    pdf = Pdf.new(pdf_params).generate_pdf
+    send_data(pdf, filename: 'test.pdf', type: 'application/pdf', disposition: 'inline')
   end
 
   private
